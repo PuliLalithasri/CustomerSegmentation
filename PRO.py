@@ -20,7 +20,7 @@ def upload():
     pathlabel.config(text=filename)
     text.delete('1.0',END)
     text.insert(END,filename+" loaded\n\n")
-    df = pd.read_csv(r'C:\Users\pulig\Downloads\Mall_Customers.csv')
+    df = pd.read_csv(filename)
     text.insert(END,str(df.head())+"\n")
 def processDataset():
     global df
